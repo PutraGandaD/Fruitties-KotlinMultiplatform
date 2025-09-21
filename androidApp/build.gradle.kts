@@ -94,7 +94,8 @@ dependencies {
 
     ksp(libs.androidx.room.compiler)
     // TODO switch this dependency to KMP-ready version
-    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.sqlite.bundled)
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
