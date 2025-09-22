@@ -15,43 +15,40 @@
  */
 
 import ConcurrencyExtras
-import CoreData
+import sharedKit
 
 protocol FruittieRepository {
     func getData() -> AsyncStream<[Fruittie]>
 }
 
 class DefaultFruittieRepository: FruittieRepository {
-    private let managedObjectContext: NSManagedObjectContext
+    private let fruittieDao: any FruittieDao
     private let api: FruittieApi
 
-    init(managedObjectContext: NSManagedObjectContext, api: FruittieApi) {
-        self.managedObjectContext = managedObjectContext
+    init(fruittieDao: any FruittieDao, api: FruittieApi) {
+        self.fruittieDao = fruittieDao
         self.api = api
     }
 
     func getData() -> AsyncStream<[Fruittie]> {
-        let context = managedObjectContext
+        let dao = fruittieDao
         Task {
-            let isEmpty = try await context.perform {
-                try context.fetch(Fruittie.fetchRequest()).isEmpty
-            }
-
+            let isEmpty = try await dao.count() == 0
             if isEmpty {
                 let response = try await api.getData(pageNumber: 0)
-                try await context.perform {
-                    response.feed.forEach { newItem in
-                        let fruittie = Fruittie(context: context)
-                        fruittie.name = newItem.name
-                        fruittie.fullName = newItem.fullName
-                    }
-
-                    try context.save()
+                let fruitties = response.feed.map {
+                    FruittieEntity(
+                        id: 0,
+                        name: $0.name,
+                        fullName: $0.fullName,
+                        calories: ""
+                    )
                 }
+                _ = try await dao.insert(fruitties: fruitties)
             }
         }
-
-        return AsyncStream.resultsStream(
-            request: Fruittie.fetchRequest(), in: context)
+        return dao.getAll().map { entities in
+            entities.map(Fruittie.init(entity:))
+        }.eraseToStream()
     }
 }
