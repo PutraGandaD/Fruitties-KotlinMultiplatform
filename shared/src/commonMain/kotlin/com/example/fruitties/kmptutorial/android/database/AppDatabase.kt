@@ -15,15 +15,23 @@
  */
 package com.example.fruitties.kmptutorial.android.database
 
+import androidx.room.ConstructedBy
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import androidx.room.RoomDatabaseConstructor
 import com.example.fruitties.kmptutorial.android.model.CartItem
 import com.example.fruitties.kmptutorial.android.model.Fruittie
+
+@Suppress("KotlinNoActualForExpect")
+expect object AppDatabaseConstructor : RoomDatabaseConstructor<AppDatabase> {
+    override fun initialize(): AppDatabase
+}
 
 @Database(
     entities = [Fruittie::class, CartItem::class],
     version = 1,
 )
+@ConstructedBy(AppDatabaseConstructor::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun fruittieDao(): FruittieDao
     abstract fun cartDao(): CartDao
