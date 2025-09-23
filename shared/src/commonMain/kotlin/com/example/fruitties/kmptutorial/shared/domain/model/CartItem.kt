@@ -1,4 +1,4 @@
-package com.example.fruitties.kmptutorial.shared.model
+package com.example.fruitties.kmptutorial.shared.domain.model
 
 import androidx.room.Embedded
 import androidx.room.Entity

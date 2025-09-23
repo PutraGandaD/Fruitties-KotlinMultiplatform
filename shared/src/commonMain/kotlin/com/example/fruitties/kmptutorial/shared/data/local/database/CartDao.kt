@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.fruitties.kmptutorial.shared.database
+package com.example.fruitties.kmptutorial.shared.data.local.database
 
 import androidx.room.Dao
 import androidx.room.Insert

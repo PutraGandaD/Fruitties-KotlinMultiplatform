@@ -75,6 +75,8 @@ kotlin {
                 // TODO Add KMP dependencies here
                 implementation(libs.androidx.room.runtime)
                 implementation(libs.androidx.sqlite.bundled)
+                implementation(libs.ktor.client.core)
+                implementation(libs.kotlinx.coroutines.core)
                 api(libs.androidx.lifecycle.viewmodel)
                 api(libs.koin.core)
                 api(libs.koin.test)
@@ -92,6 +94,7 @@ kotlin {
                 // Add Android-specific dependencies here. Note that this source set depends on
                 // commonMain by default and will correctly pull the Android artifacts of any KMP
                 // dependencies declared in commonMain.
+                implementation(libs.ktor.client.okhttp)
             }
         }
 
@@ -110,6 +113,7 @@ kotlin {
                 // part of KMP’s default source set hierarchy. Note that this source set depends
                 // on common by default and will correctly pull the iOS artifacts of any
                 // KMP dependencies declared in commonMain.
+                implementation(libs.ktor.client.darwin)
             }
         }
     }

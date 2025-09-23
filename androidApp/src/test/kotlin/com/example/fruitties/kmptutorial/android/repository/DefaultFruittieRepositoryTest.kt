@@ -15,7 +15,7 @@
  */
 package com.example.fruitties.kmptutorial.android.repository
 
-import com.example.fruitties.kmptutorial.shared.database.FruittieDao
+import com.example.fruitties.kmptutorial.shared.data.local.database.FruittieDao
 import com.example.fruitties.kmptutorial.android.fakes.FakeFruittieApi
 import com.example.fruitties.kmptutorial.android.fakes.FakeFruittieDao
 import com.example.fruitties.kmptutorial.android.network.FruittieApi

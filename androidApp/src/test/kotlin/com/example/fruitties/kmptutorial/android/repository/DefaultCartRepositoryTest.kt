@@ -15,7 +15,7 @@
  */
 package com.example.fruitties.kmptutorial.android.repository
 
-import com.example.fruitties.kmptutorial.shared.database.CartDao
+import com.example.fruitties.kmptutorial.shared.data.local.database.CartDao
 import com.example.fruitties.kmptutorial.android.fakes.FakeCartDao
 import com.example.fruitties.kmptutorial.shared.model.Fruittie
 import junit.framework.TestCase.assertEquals

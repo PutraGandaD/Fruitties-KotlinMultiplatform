@@ -19,9 +19,9 @@ import android.content.Context
 import android.database.sqlite.SQLiteConstraintException
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
-import com.example.fruitties.kmptutorial.shared.database.AppDatabase
-import com.example.fruitties.kmptutorial.shared.database.CartDao
-import com.example.fruitties.kmptutorial.shared.database.FruittieDao
+import com.example.fruitties.kmptutorial.shared.data.local.database.AppDatabase
+import com.example.fruitties.kmptutorial.shared.data.local.database.CartDao
+import com.example.fruitties.kmptutorial.shared.data.local.database.FruittieDao
 import com.example.fruitties.kmptutorial.shared.model.CartItem
 import com.example.fruitties.kmptutorial.shared.model.Fruittie
 import junit.framework.TestCase.assertEquals

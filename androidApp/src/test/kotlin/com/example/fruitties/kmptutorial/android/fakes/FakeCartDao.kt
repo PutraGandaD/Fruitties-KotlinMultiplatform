@@ -15,7 +15,7 @@
  */
 package com.example.fruitties.kmptutorial.android.fakes
 
-import com.example.fruitties.kmptutorial.shared.database.CartDao
+import com.example.fruitties.kmptutorial.shared.data.local.database.CartDao
 import com.example.fruitties.kmptutorial.shared.model.CartItem
 import com.example.fruitties.kmptutorial.shared.model.CartItemWithFruittie
 import com.example.fruitties.kmptutorial.shared.model.Fruittie

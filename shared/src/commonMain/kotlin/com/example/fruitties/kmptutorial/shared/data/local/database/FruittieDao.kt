@@ -13,26 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.fruitties.kmptutorial.shared.database
+package com.example.fruitties.kmptutorial.shared.data.local.database
 
-import androidx.room.ConstructedBy
-import androidx.room.Database
-import androidx.room.RoomDatabase
-import androidx.room.RoomDatabaseConstructor
-import com.example.fruitties.kmptutorial.shared.model.CartItem
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
 import com.example.fruitties.kmptutorial.shared.model.Fruittie
+import kotlinx.coroutines.flow.Flow
 
-@Suppress("KotlinNoActualForExpect")
-expect object AppDatabaseConstructor : RoomDatabaseConstructor<AppDatabase> {
-    override fun initialize(): AppDatabase
-}
+@Dao
+interface FruittieDao {
 
-@Database(
-    entities = [Fruittie::class, CartItem::class],
-    version = 1,
-)
-@ConstructedBy(AppDatabaseConstructor::class)
-abstract class AppDatabase : RoomDatabase() {
-    abstract fun fruittieDao(): FruittieDao
-    abstract fun cartDao(): CartDao
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(fruitties: List<Fruittie>): List<Long>
+
+    @Query("SELECT * FROM Fruittie")
+    fun getAll(): Flow<List<Fruittie>>
+
+    @Query("SELECT COUNT(*) as count FROM Fruittie")
+    suspend fun count(): Int
 }

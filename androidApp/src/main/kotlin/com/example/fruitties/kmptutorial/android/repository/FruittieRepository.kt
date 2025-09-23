@@ -17,7 +17,7 @@ package com.example.fruitties.kmptutorial.android.repository
 
 import com.example.fruitties.kmptutorial.android.network.FruittieApi
 import com.example.fruitties.kmptutorial.android.network.toModel
-import com.example.fruitties.kmptutorial.shared.database.FruittieDao
+import com.example.fruitties.kmptutorial.shared.data.local.database.FruittieDao
 import com.example.fruitties.kmptutorial.shared.model.Fruittie
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineScope

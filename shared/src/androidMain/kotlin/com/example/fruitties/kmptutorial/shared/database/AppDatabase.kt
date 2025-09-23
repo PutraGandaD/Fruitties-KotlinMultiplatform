@@ -3,6 +3,7 @@ package com.example.fruitties.kmptutorial.shared.database
 import android.content.Context
 import androidx.room.Room
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
+import com.example.fruitties.kmptutorial.shared.data.local.database.AppDatabase
 
 fun appDatabase(context: Context) : AppDatabase {
     val dbFile = context.getDatabasePath("sharedfruits.db")
