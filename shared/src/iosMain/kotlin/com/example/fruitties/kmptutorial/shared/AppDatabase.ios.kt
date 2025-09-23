@@ -2,7 +2,7 @@ package com.example.fruitties.kmptutorial.shared
 
 import androidx.room.Room
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
-import com.example.fruitties.kmptutorial.android.database.AppDatabase
+import com.example.fruitties.kmptutorial.shared.database.AppDatabase
 import kotlinx.cinterop.BetaInteropApi
 import kotlinx.cinterop.ExperimentalForeignApi
 import kotlinx.cinterop.ObjCObjectVar
