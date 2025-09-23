@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.fruitties.kmptutorial.android.database
+package com.example.fruitties.kmptutorial.shared.database
 
 import androidx.room.ConstructedBy
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.RoomDatabaseConstructor
-import com.example.fruitties.kmptutorial.android.model.CartItem
-import com.example.fruitties.kmptutorial.android.model.Fruittie
+import com.example.fruitties.kmptutorial.shared.model.CartItem
+import com.example.fruitties.kmptutorial.shared.model.Fruittie
 
 @Suppress("KotlinNoActualForExpect")
 expect object AppDatabaseConstructor : RoomDatabaseConstructor<AppDatabase> {

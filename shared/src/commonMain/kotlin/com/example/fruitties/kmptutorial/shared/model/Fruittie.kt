@@ -1,4 +1,4 @@
-package com.example.fruitties.kmptutorial.android.model
+package com.example.fruitties.kmptutorial.shared.model
 
 import androidx.room.Entity
 import androidx.room.Index

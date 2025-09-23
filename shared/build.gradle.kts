@@ -51,20 +51,14 @@ kotlin {
 // https://developer.android.com/kotlin/multiplatform/migrate
     val xcfName = "sharedKit"
 
-    iosX64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosArm64 {
-        binaries.framework {
-            baseName = xcfName
-        }
-    }
-
-    iosSimulatorArm64 {
-        binaries.framework {
+    listOf(
+        iosX64(),
+        iosArm64(),
+        iosSimulatorArm64(),
+    ).forEach {
+        it.binaries.framework {
+            // Add this line to all the targets you want to export this dependency
+            export(libs.androidx.lifecycle.viewmodel)
             baseName = xcfName
         }
     }
@@ -81,7 +75,7 @@ kotlin {
                 // TODO Add KMP dependencies here
                 implementation(libs.androidx.room.runtime)
                 implementation(libs.androidx.sqlite.bundled)
-
+                api(libs.androidx.lifecycle.viewmodel)
             }
         }
 

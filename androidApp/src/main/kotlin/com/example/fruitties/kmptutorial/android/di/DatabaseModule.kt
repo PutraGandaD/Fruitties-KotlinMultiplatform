@@ -16,7 +16,6 @@
 package com.example.fruitties.kmptutorial.android.di
 
 import android.content.Context
-import androidx.room.Room
 import com.example.fruitties.kmptutorial.android.database.AppDatabase
 import com.example.fruitties.kmptutorial.shared.database.appDatabase
 import dagger.Module
