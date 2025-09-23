@@ -15,10 +15,21 @@
  */
 package com.example.fruitties.kmptutorial.android.fakes
 
-import com.example.fruitties.kmptutorial.android.model.Fruittie
+import com.example.fruitties.kmptutorial.shared.model.Fruittie
 import com.example.fruitties.kmptutorial.android.network.FruittieApi
+import com.example.fruitties.kmptutorial.android.network.FruittieNetworkEntity
 import com.example.fruitties.kmptutorial.android.network.FruittiesResponse
 
 class FakeFruittieApi(val list: List<Fruittie>) : FruittieApi {
-    override suspend fun getData(pageNumber: Int): FruittiesResponse = FruittiesResponse(list, 1, 1)
+    override suspend fun getData(pageNumber: Int): FruittiesResponse {
+        val fakeFruittieNetworkEntity = list.map {
+            FruittieNetworkEntity(
+                name = it.name,
+                fullName = it.fullName,
+                calories = it.calories
+            )
+        }
+
+        return FruittiesResponse(fakeFruittieNetworkEntity, 1, 1)
+    }
 }

@@ -37,7 +37,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.fruitties.kmptutorial.android.R
-import com.example.fruitties.kmptutorial.android.model.Fruittie
+import com.example.fruitties.kmptutorial.shared.model.Fruittie
 
 @Composable
 fun FruittieItem(

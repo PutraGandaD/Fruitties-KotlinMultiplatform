@@ -32,6 +32,7 @@
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 		851BE67C2E817A3200FCEAEC /* Fruittie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851BE67B2E817A3200FCEAEC /* Fruittie.swift */; };
 		851BE67E2E817A6F00FCEAEC /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851BE67D2E817A6F00FCEAEC /* CartItem.swift */; };
+		8529F00B2E82776200CABC3A /* IosViewModelStoreOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8529F00A2E82776200CABC3A /* IosViewModelStoreOwner.swift */; };
 		A41A39FB2CF793B600685993 /* ConcurrencyExtras in Frameworks */ = {isa = PBXBuildFile; productRef = A41A39FA2CF793B600685993 /* ConcurrencyExtras */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,7 @@
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		851BE67B2E817A3200FCEAEC /* Fruittie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruittie.swift; sourceTree = "<group>"; };
 		851BE67D2E817A6F00FCEAEC /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		8529F00A2E82776200CABC3A /* IosViewModelStoreOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IosViewModelStoreOwner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				183004952CB70661001DF9CA /* Repository */,
 				183004962CB7066C001DF9CA /* UI */,
 				1885088A2CB99117003F8D5E /* main.swift */,
+				8529F00A2E82776200CABC3A /* IosViewModelStoreOwner.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				187640EF2CAB2915002A80F7 /* Fruitties.xcdatamodeld in Sources */,
 				183004822CACE30F001DF9CA /* ContentViewModel.swift in Sources */,
 				183004922CB700CA001DF9CA /* CartRepository.swift in Sources */,
+				8529F00B2E82776200CABC3A /* IosViewModelStoreOwner.swift in Sources */,
 				1830047C2CACE2B0001DF9CA /* AppContainer.swift in Sources */,
 				851BE67C2E817A3200FCEAEC /* Fruittie.swift in Sources */,
 				183004742CAC5744001DF9CA /* FruittieApi.swift in Sources */,

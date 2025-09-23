@@ -19,7 +19,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.fruitties.kmptutorial.android.model.Fruittie
+import com.example.fruitties.kmptutorial.shared.model.Fruittie
 import kotlinx.coroutines.flow.Flow
 
 @Dao

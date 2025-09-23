@@ -15,9 +15,9 @@
  */
 package com.example.fruitties.kmptutorial.android.repository
 
-import com.example.fruitties.kmptutorial.android.database.CartDao
+import com.example.fruitties.kmptutorial.shared.database.CartDao
 import com.example.fruitties.kmptutorial.android.fakes.FakeCartDao
-import com.example.fruitties.kmptutorial.android.model.Fruittie
+import com.example.fruitties.kmptutorial.shared.model.Fruittie
 import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.runTest

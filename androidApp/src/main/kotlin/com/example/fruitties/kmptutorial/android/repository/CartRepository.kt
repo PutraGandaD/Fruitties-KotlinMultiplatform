@@ -15,9 +15,9 @@
  */
 package com.example.fruitties.kmptutorial.android.repository
 
-import com.example.fruitties.kmptutorial.android.database.CartDao
-import com.example.fruitties.kmptutorial.android.model.CartItemWithFruittie
-import com.example.fruitties.kmptutorial.android.model.Fruittie
+import com.example.fruitties.kmptutorial.shared.database.CartDao
+import com.example.fruitties.kmptutorial.shared.model.CartItemWithFruittie
+import com.example.fruitties.kmptutorial.shared.model.Fruittie
 import javax.inject.Inject
 import kotlinx.coroutines.flow.Flow
 

@@ -15,7 +15,7 @@
  */
 package com.example.fruitties.kmptutorial.android.fakes
 
-import com.example.fruitties.kmptutorial.android.model.Fruittie
+import com.example.fruitties.kmptutorial.shared.model.Fruittie
 import com.example.fruitties.kmptutorial.android.repository.FruittieRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow

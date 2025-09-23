@@ -15,7 +15,7 @@
  */
 package com.example.fruitties.kmptutorial.android.network
 
-import com.example.fruitties.kmptutorial.android.model.Fruittie
+import com.example.fruitties.kmptutorial.shared.model.Fruittie
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

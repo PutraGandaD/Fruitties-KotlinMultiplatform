@@ -15,10 +15,10 @@
  */
 package com.example.fruitties.kmptutorial.android.fakes
 
-import com.example.fruitties.kmptutorial.android.database.CartDao
-import com.example.fruitties.kmptutorial.android.model.CartItem
-import com.example.fruitties.kmptutorial.android.model.CartItemWithFruittie
-import com.example.fruitties.kmptutorial.android.model.Fruittie
+import com.example.fruitties.kmptutorial.shared.database.CartDao
+import com.example.fruitties.kmptutorial.shared.model.CartItem
+import com.example.fruitties.kmptutorial.shared.model.CartItemWithFruittie
+import com.example.fruitties.kmptutorial.shared.model.Fruittie
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.map

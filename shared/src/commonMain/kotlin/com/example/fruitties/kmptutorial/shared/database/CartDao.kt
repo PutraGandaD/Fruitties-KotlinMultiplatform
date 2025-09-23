@@ -21,9 +21,9 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Transaction
 import androidx.room.Update
-import com.example.fruitties.kmptutorial.android.model.CartItem
-import com.example.fruitties.kmptutorial.android.model.CartItemWithFruittie
-import com.example.fruitties.kmptutorial.android.model.Fruittie
+import com.example.fruitties.kmptutorial.shared.model.CartItem
+import com.example.fruitties.kmptutorial.shared.model.CartItemWithFruittie
+import com.example.fruitties.kmptutorial.shared.model.Fruittie
 import kotlinx.coroutines.flow.Flow
 
 @Dao

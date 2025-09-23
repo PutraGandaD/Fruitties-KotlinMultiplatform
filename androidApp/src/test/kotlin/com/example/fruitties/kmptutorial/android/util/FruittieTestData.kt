@@ -15,7 +15,7 @@
  */
 package com.example.fruitties.kmptutorial.android.util
 
-import com.example.fruitties.kmptutorial.android.model.Fruittie
+import com.example.fruitties.kmptutorial.shared.model.Fruittie
 
 object FruittieTestData {
     const val FRUITTIE_ID = 123L
