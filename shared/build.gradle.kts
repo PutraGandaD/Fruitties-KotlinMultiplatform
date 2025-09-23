@@ -76,6 +76,8 @@ kotlin {
                 implementation(libs.androidx.room.runtime)
                 implementation(libs.androidx.sqlite.bundled)
                 api(libs.androidx.lifecycle.viewmodel)
+                api(libs.koin.core)
+                api(libs.koin.test)
             }
         }
 

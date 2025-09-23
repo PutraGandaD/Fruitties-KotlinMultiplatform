@@ -35,6 +35,7 @@ turbine = "1.2.1"
 androidx-sqlite = "2.5.0"
 core = "1.7.0"
 skie = "0.10.6"
+koin = "3.2.0"
 
 [libraries]
 # TODO add room-runtime and sqlite-bundled dependencies
@@ -60,6 +61,11 @@ ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negoti
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorVersion" }
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktorVersion" }
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorVersion" }
+
+koin-core = { module = "io.insert-koin:koin-core", version.ref="koin" }
+koin-test = { module = "io.insert-koin:koin-test", version.ref="koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref="koin" }
+
 
 ## Testing Start ##
 
